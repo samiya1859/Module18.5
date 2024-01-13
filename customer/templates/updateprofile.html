@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form action="" method="post" style="width: 50%;margin: auto; margin-top: 30px;">
+    <h3>Update your profile</h3>
+    <a class="btn btn-warning text-decoration-none" href="{% url "passchange" %}">Change Your Password</a>
+    <a class="btn btn-info text-decoration-none" href="{% url "passchange2" %}">Change Your Password without old password</a>
+
+    {% csrf_token %}
+    {{form | crispy}}
+
+</form>
+
+{% endblock content %}
+
+
